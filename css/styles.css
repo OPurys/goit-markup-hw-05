@@ -35,6 +35,16 @@ img {
   object-fit: cover;
 }
 
+button,
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  line-height: inherit;
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -64,13 +74,9 @@ img {
   min-width: 169px;
   height: 56px;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
-  cursor: pointer;
-  border: none;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -416,20 +422,21 @@ img {
   color: #f4f4fd;
 }
 
-.page-footer-label {
-  display: block;
+.page-footer-text {
   margin-bottom: 16px;
   font-weight: 500;
   color: #fff;
 }
 
+.page-footer-form {
+  display: flex;
+  gap: 24px;
+}
+
 .page-footer-input {
-  margin-right: 22px;
   padding: 8px 16px;
   border: 1px solid #fff;
   border-radius: 4px;
-  background: none;
-  outline: none;
   width: 264px;
   height: 40px;
   font-size: 12px;
@@ -448,10 +455,12 @@ img {
 }
 
 .btn-subscribe {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   min-width: 165px;
   height: 40px;
-  vertical-align: middle;
   box-shadow: none;
 }
 /*--------------------------------------------------------*/
@@ -492,6 +501,34 @@ img {
   overflow-y: auto;
 }
 
+.modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #404bbf;
+}
+
+.modal-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: #ffffff;
+}
+
 .modal-text {
   margin-bottom: 16px;
   padding: 0 10px;
@@ -520,7 +557,6 @@ img {
 .modal-input {
   margin-bottom: 8px;
   padding: 8px 16px;
-  outline: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   height: 40px;
