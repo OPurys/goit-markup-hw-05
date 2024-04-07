@@ -553,9 +553,6 @@ button {
 
 .modal-form-group {
   margin-bottom: 8px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .modal-form-group:nth-last-of-type(2) {
@@ -573,6 +570,10 @@ button {
 
 .modal-label:last-child {
   margin-bottom: 0;
+}
+
+.modal-input-wrapper {
+  position: relative;
 }
 
 .modal-input {
